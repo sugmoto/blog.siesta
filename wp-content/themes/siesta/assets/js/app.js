@@ -7,12 +7,14 @@ $(function(){
     });
 });
 
+
 /*load more
 ===============================================================*/
-let now_post_num = 14; // 現在表示されている件数
-let get_post_num = 14;  // もっと読み込むボタンで取得する件数
+let now_post_num = 15; // 現在表示されている件数
+let get_post_num = 18; // もっと読み込むボタンで取得する件数
 
 //archive側で設定したdata属性の値を取得
+let init = $(".init");
 let load = $(".load");
 let all_count = load.data("count"); //カスタム投稿の全件数
 
@@ -37,7 +39,7 @@ $(window).on('scroll', function () {
             },
         })
         .done(function(data){
-            load.append(data); 
+            init.append(data);
             now_post_num = now_post_num + get_post_num; 
         })
         .fail(function(){
@@ -46,12 +48,3 @@ $(window).on('scroll', function () {
 
     }
 });
-
-
-/* swiper - single_recent
-===============================================================*/
-const swiper = new Swiper('.single_recent', {
-    spaceBetween: 10,
-    slidesPerView: 'auto'
-});
-  
