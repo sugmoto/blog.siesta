@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="format-detection" content="telephone=no" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +16,10 @@
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-<link rel="icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/cmn/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/cmn/apple-touch-icon.png" sizes="180x180">
+<link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/android-chrome-192x192.png">
+
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/css/style.css">
 <?php wp_head(); ?>
 </head>
@@ -25,7 +27,7 @@
 <body <?php body_class(); ?>>
 
 <div class="head">
-	<p class="head_ttl">BLOG</p>
+	<p class="head_ttl"><a href="<?php echo esc_url(home_url()); ?>">BLOG</a></p>
 </div>
 <div class="head-logo"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo.svg" alt="SIESTA" width="100%"></div>
 
